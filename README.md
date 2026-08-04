@@ -70,7 +70,7 @@ git clone https://github.com/KagaribiDev/ds-vision-skill-plus.git "$env:USERPROF
 
 安装后先配置通道（见下），即可直接使用：向 Codex/DeepSeek 发一张图片或一个 PDF 问"看看这张图"、"识别图中文字"、"解析这个文档"，或说"帮我画一张图"，即可自动路由。
 
-### 2. 配置云端通道
+### 2. 配置云端通道（api_key会存到你的用户变量里请不用担心密钥泄露的问题）
 
 请先进入你的 Skill 目录（此处以 Codex 为例，其他 Agent 同理）：
 
