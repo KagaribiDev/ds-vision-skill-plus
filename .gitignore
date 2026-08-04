@@ -1,0 +1,12 @@
+# Reasonix / agent session metadata (never commit - may contain local paths & screenshots)
+.reasonix/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Local runtime artifacts (created by scripts at runtime, not part of the skill)
+cache/
+generated/
+local-profile.json

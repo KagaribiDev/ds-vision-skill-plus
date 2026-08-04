@@ -1,0 +1,4 @@
+interface:
+  display_name: "DS 视觉桥 Plus"
+  short_description: "多通道识图+生图:自定义视觉模型/GLM兜底/OCR/文档/本地,给 DeepSeek 装眼睛"
+  default_prompt: "用 ds-vision-skill-plus 看看这张图片里有什么 / 生成一张图片"
