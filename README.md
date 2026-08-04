@@ -38,7 +38,7 @@
     -   在测试过程中 Zcode, Reasonix 均能完美调用 Skill 生图和识图功能。
     -   **Codex 特殊情况**：Codex 生图功能正常，但无法在附件里上传图片。预测是 ccswitch 有强制校验功能不允许外接 DS 情况下上传图片。
     -   **解决方案**：直接让 Codex 自己读取图片。
-    -   *Prompt 示例*：`解释一下内容 C:\Users\25837\Pictures\Screenshots\屏幕截图 2026-08-04 132739.png`
+    -   *Prompt 示例*：`解释一下内容 <你的图片路径>`
 3.  **具体测试模型配置参考**：
     -   **识图模型**：
         ```properties
