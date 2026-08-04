@@ -38,7 +38,7 @@
     -   在测试过程中 Zcode, Reasonix 均能完美调用 Skill 生图和识图功能。
     -   **Codex 特殊情况**：Codex 生图功能正常，但无法在附件里上传图片。预测是 ccswitch 有强制校验功能不允许外接 DS 情况下上传图片。
     -   **解决方案**：直接让 Codex 自己读取图片。
-    -   *Prompt 示例*：`解释一下内容 <你的图片路径>`
+    -   *Prompt 示例*：`解释一下内容 <图片路径> 2026-08-04 132739.png`
 3.  **具体测试模型配置参考**：
     -   **识图模型**：
         ```properties
@@ -65,21 +65,22 @@
 在 PowerShell 中执行以下命令进行安装：
 
 ```powershell
-git clone https://github.com/KagaribiDev/ds-vision-skill-plus.git "$env:USERPROFILE\.codex\skills\ds-vision-skill-plus"
+git clone https://github.com/KagaribiDev/ds-vision-skill-plus.git "$env:USERPROFILE\.reasonix\skills\ds-vision-skill-plus"
 ```
 
-安装后先配置通道（见下），即可直接使用：向 Codex/DeepSeek 发一张图片或一个 PDF 问"看看这张图"、"识别图中文字"、"解析这个文档"，或说"帮我画一张图"，即可自动路由。
+安装后先配置通道（见下），即可直接使用：向 Reasonix/DeepSeek 发一张图片或一个 PDF 问"看看这张图"、"识别图中文字"、"解析这个文档"，或说"帮我画一张图"，即可自动路由。
 
-### 2. 配置云端通道（api_key会存到你的用户变量里请不用担心密钥泄露的问题）
+### 2. 配置云端通道
 
-请先进入你的 Skill 目录（此处以 Codex 为例，其他 Agent 同理）：
-
+请先进入你的 Skill 目录：
+（ps:api_key会存到你的用户变量里请不用担心密钥泄露的问题）
 ```powershell
-cd C:\Users\<用户名>\.codex\skills
+# 此处以 Reasonix 为例，其他 Agent 同理
+# 如果是第一次安装skill则skills目录可能不存在，若不存在自己建一个skills即可
+cd C:\Users\<用户名>\.reasonix\skills
 ```
 
 **配置命令速查：**
-
 | 功能 | 命令 | 说明 |
 | :--- | :--- | :--- |
 | **配置视觉默认通道** | `scripts\setup.ps1 -SetCustom -BaseUrl <url> -Key <key> -Model <model> -Verify` | **必配**才能识图；可配任意 OpenAI 兼容模型 |
@@ -97,7 +98,7 @@ scripts\setup.ps1 -Status
 scripts\setup.ps1 -SetCustom -BaseUrl https://dashscope.aliyuncs.com/compatible-mode/v1 -Key sk-xx -Model qwen3.7-plus -Verify
 
 # 3. 配置生图通道（必配才能生图；服务商需支持 images/generations）
-scripts\setup.ps1 -SetGen -BaseUrl https://api.siliconflow.cn/v1/images/generations -Key sk-xx -Model KKwai-Kolors/Kolors -Verify
+scripts\setup.ps1 -SetGen -BaseUrl https://api.siliconflow.cn/v1/images/generations -Key sk-xx -Model Kwai-Kolors/Kolors -Verify
 
 # 4. 再次查看可用通道（此时若为 configured 则配置成功）
 scripts\setup.ps1 -Status
