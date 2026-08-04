@@ -51,7 +51,7 @@
         ```properties
         base_url=https://api.siliconflow.cn/v1/images/generations
         model=Kwai-Kolors/Kolors
-        # 自行去(https://cloud.siliconflow.cn/me/account/ak)注册，无额度
+        # 自行去(https://cloud.siliconflow.cn/me/account/ak)注册，有免费额度
         api_key=sk-xxxxxxx
         ```
 4.  作者为第一次写实用性开源 Skill，表述可能存在不当，如有疑问可向作者进行反馈，作者很好说话的喵。
