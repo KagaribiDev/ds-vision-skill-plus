@@ -112,7 +112,7 @@ scripts\setup.ps1 -Status
 | **生图**        | `scripts\image-gen.ps1 -Prompt "一只戴着眼镜的柴犬,卡通风格" -Json`                               |        |       |
 | **纯文字提取**     | `scripts\baidu-ocr.ps1 -ImagePath <图片路径> -Json`                                      |        |       |
 | **文档/PDF 解析** | `scripts\mineru-extract.ps1 -FilePath <文档路径> -Json`                                  |        |       |
-| **移除配置**      | `scripts\setup.ps1 -RemoveKey -Channel <name                                         | custom | gen>` |
+| **移除配置**      | `scripts\setup.ps1 -RemoveKey -Channel <name>`                                         | custom | gen |
 
 ### 4. 配置引导
 
